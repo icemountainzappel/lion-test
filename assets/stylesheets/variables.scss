@@ -1,0 +1,95 @@
+@import "../../bower_components/bourbon/core/bourbon";
+
+$lion-red: #ff2927;
+$orange: #f68b20;
+$light-grey: #f3f3f3;
+$border-grey: #dbdbdb;
+$dark-grey: #404040;
+$title-grey: #696767;
+$text-grey: #333333;
+$dark-blue: #1a0154;
+
+@include font-face(
+  "FontAwesome",
+  "../../dist/fonts/bootstrap/fontawesome-webfont",
+  ("woff2", "woff")
+) {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.center-absolute{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text{
+  &-large{
+    font-size: 16px;
+  }
+
+  &-small{
+    font-size: 12px;
+  }
+
+  &-grey{
+    color: $text-grey;
+  }
+
+  &-bold{
+    font-weight: bold;
+  }
+
+  &-link{
+    transition: all 0.5s ease;
+    &:hover{
+      color: $lion-red;
+    }
+  }
+}
+
+.title{
+  &-section{
+    display: block;
+    border-bottom: 1px solid $lion-red;
+    color: $title-grey;
+    padding-bottom: 10px;    
+  }
+}
+
+.lightbox{
+  display: none;
+  background: #fff;
+  padding: 15px 0;
+}
+
+.btn-lightbox{
+  background: $orange;
+  color: #fff;
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: 0;
+  transition: all 0.5s ease;
+  width: 100%;
+  @media (min-width: 768px){
+    width: auto;
+  }
+  
+  &:hover{
+    color: black;
+    box-shadow: 2px 2px 2px $dark-grey;
+  }
+}
+
+.list-nostyle{
+  list-style-type: none;  
+  li{
+    display: inline-block;
+  }
+}
+
+.zero-pad{
+  padding: 0 !important;
+}
